@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CTA | Competitive Touchline Association</title>
+
+<style>
+
+:root {
+
+  --bg: #080b09;
+
+  --panel: #101713;
+
+  --green: #a5e65b;
+
+  --muted: #929b94;
+
+  --line: rgba(255,255,255,.09);
+
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+
+  background: var(--bg);
+
+  color: #f4f7f2;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+header {
+
+  height: 82px;
+
+  padding: 0 7%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom: 1px solid var(--line);
+
+  background: rgba(8,11,9,.94);
+
+}
+
+.brand { display:flex; align-items:center; gap:13px; }
+
+.brand img { width:48px; height:48px; object-fit:contain; }
+
+.brand-name { font-size:14px; font-weight:800; letter-spacing:1.5px; }
+
+.brand-name span { display:block; color:var(--muted); font-size:9px; margin-top:5px; letter-spacing:2px; }
+
+nav { display:flex; gap:25px; }
+
+nav a {
+
+  color:#b8c0ba; text-decoration:none; font-size:12px;
+
+  font-weight:700; transition:.2s;
+
+}
+
+nav a:hover { color:var(--green); }
+
+.hero {
+
+  min-height:580px;
+
+  padding:100px 8%;
+
+  display:flex;
+
+  align-items:center;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+
+    radial-gradient(ellipse at 78% 48%, rgba(119,185,62,.17), transparent 42%),
+
+    linear-gradient(110deg,#080b09 35%,#101a11 100%);
+
+}
+
+.hero:after {
+
+  content:""; position:absolute; inset:0;
+
+  background:linear-gradient(90deg,rgba(8,11,9,.15),transparent);
+
+  pointer-events:none;
+
+}
+
+.hero-content { max-width:650px; position:relative; z-index:1; }
+
+.eyebrow {
+
+  color:var(--green); font-size:11px; letter-spacing:4px;
+
+  font-weight:800; margin-bottom:25px;
+
+}
+
+h1 { font-size:clamp(42px,7vw,78px); line-height:.98; letter-spacing:-3px; }
+
+h1 span { color:var(--green); }
+
+.hero p {
+
+  color:#a7b0a9; line-height:1.8; font-size:15px;
+
+  max-width:480px; margin-top:25px;
+
+}
+
+.hero-logo {
+
+  position:absolute; right:8%; top:50%; transform:translateY(-50%);
+
+  width:min(34vw,370px); height:min(34vw,370px);
+
+  object-fit:contain; opacity:.88;
+
+  filter:drop-shadow(0 0 45px rgba(151,220,85,.24));
+
+}
+
+.section { padding:75px 8%; }
+
+.section-heading {
+
+  display:flex; align-items:end; justify-content:space-between;
+
+  margin-bottom:30px; gap:20px;
+
+}
+
+.kicker { color:var(--green); font-size:10px; letter-spacing:3px; font-weight:800; }
+
+h2 { font-size:30px; margin-top:10px; letter-spacing:-1px; }
+
+.section-heading p { color:var(--muted); font-size:12px; }
+
+.grid {
+
+  display:grid; grid-template-columns:repeat(3,1fr); gap:16px;
+
+}
+
+.card {
+
+  background:var(--panel); border:1px solid var(--line);
+
+  padding:27px; min-height:155px; transition:.25s;
+
+}
+
+.card:hover { border-color:rgba(165,230,91,.45); transform:translateY(-3px); }
+
+.card-number { color:var(--green); font-size:11px; letter-spacing:2px; }
+
+.card h3 { margin-top:20px; font-size:19px; }
+
+.card p { color:var(--muted); font-size:12px; line-height:1.7; margin-top:9px; }
+
+.notice {
+
+  margin-top:18px; padding:25px 28px;
+
+  background:#0e1510; border-left:3px solid var(--green);
+
+  color:#aeb8b0; font-size:13px; line-height:1.7;
+
+}
+
+footer {
+
+  border-top:1px solid var(--line); padding:30px 8%;
+
+  display:flex; justify-content:space-between; gap:20px;
+
+  color:#7f8981; font-size:11px;
+
+}
+
+footer strong { color:#dce5dc; }
+
+@media(max-width:760px) {
+
+  header { padding:0 5%; height:auto; min-height:75px; flex-wrap:wrap; gap:12px; padding-top:13px; padding-bottom:13px; }
+
+  nav { width:100%; overflow-x:auto; gap:19px; padding:8px 0; }
+
+  nav a { white-space:nowrap; font-size:11px; }
+
+  .hero { min-height:570px; padding:75px 7%; align-items:flex-end; }
+
+  .hero-logo { width:230px; height:230px; top:15%; right:5%; transform:none; opacity:.55; }
+
+  .hero-content { margin-top:170px; }
+
+  .grid { grid-template-columns:1fr; }
+
+  .section { padding:55px 7%; }
+
+  .section-heading { align-items:start; flex-direction:column; }
+
+  footer { flex-direction:column; }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="brand">
+
+    <img src="cta-logo.png" alt="CTA emblem">
+
+    <div class="brand-name">
+
+      COMPETITIVE TOUCHLINE
+
+      <span>ASSOCIATION</span>
+
+    </div>
+
+  </div>
+
+  <nav>
+
+    <a href="#home">HOME</a>
+
+    <a href="#competitions">COMPETITIONS</a>
+
+    <a href="#clubs">CLUBS</a>
+
+    <a href="#fixtures">FIXTURES</a>
+
+    <a href="#standings">STANDINGS</a>
+
+    <a href="#statistics">STATISTICS</a>
+
+  </nav>
+
+</header>
+
+<main>
+
+<section class="hero" id="home">
+
+  <img class="hero-logo" src="cta-logo.png" alt="CTA official emblem">
+
+  <div class="hero-content">
+
+    <div class="eyebrow">THE OFFICIAL CTA WEBSITE</div>
+
+    <h1>COMPETITIVE<br><span>TOUCHLINE</span><br>ASSOCIATION.</h1>
+
+    <p>The central hub for CTA competitions, clubs, fixtures and league information.</p>
+
+  </div>
+
+</section>
+
+<section class="section" id="competitions">
+
+  <div class="section-heading">
+
+    <div><div class="kicker">CTA • LEAGUE SYSTEM</div><h2>Competitions</h2></div>
+
+    <p>Official competition information</p>
+
+  </div>
+
+  <div class="grid">
+
+    <article class="card"><div class="card-number">01 / LEAGUE</div><h3>League Competition</h3><p>Follow the latest league campaign and its participating clubs.</p></article>
+
+    <article class="card"><div class="card-number">02 / CUP</div><h3>Cup Competition</h3><p>Competition format and cup information will be announced here.</p></article>
+
+    <article class="card"><div class="card-number">03 / INFORMATION</div><h3>Regulations</h3><p>Official competition rules and announcements.</p></article>
+
+  </div>
+
+</section>
+
+<section class="section" id="clubs">
+
+  <div class="section-heading"><div><div class="kicker">PARTICIPANTS</div><h2>Clubs</h2></div></div>
+
+  <div class="notice">Official participating club profiles will appear here.</div>
+
+</section>
+
+<section class="section" id="fixtures">
+
+  <div class="section-heading"><div><div class="kicker">MATCH CENTRE</div><h2>Fixtures</h2></div></div>
+
+  <div class="notice">Upcoming fixtures and confirmed match results will be published here.</div>
+
+</section>
+
+<section class="section" id="standings">
+
+  <div class="section-heading"><div><div class="kicker">LEAGUE TABLE</div><h2>Standings</h2></div></div>
+
+  <div class="notice">The official league table will appear here once competition data is available.</div>
+
+</section>
+
+<section class="section" id="statistics">
+
+  <div class="section-heading"><div><div class="kicker">SEASON RECORDS</div><h2>Statistics</h2></div></div>
+
+  <div class="grid">
+
+    <article class="card"><div class="card-number">01</div><h3>Top Scorers</h3><p>Official goalscoring records.</p></article>
+
+    <article class="card"><div class="card-number">02</div><h3>Assists</h3><p>Official assist records.</p></article>
+
+    <article class="card"><div class="card-number">03</div><h3>Goalkeepers</h3><p>Clean sheets and goalkeeper records.</p></article>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+
+  <strong>CTA — COMPETITIVE TOUCHLINE ASSOCIATION</strong>
+
+  <span>Official website • All rights reserved</span>
+
+</footer>
+
+</body>
+
+</html>
